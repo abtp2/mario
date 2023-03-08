@@ -6,7 +6,7 @@
 				<link rel="stylesheet" href="icons/boxicons.css">
 				<title>Mario</title>
 </head>
-<body class="light-theme">
+<body>
 				
 				
 
@@ -54,6 +54,11 @@
 
 
 
+<!-- footer -->
+<footer>
+ <p>Made with <i class="bx bxs-heart"></i> by <a href="https://ashutoshpandey.netlify.app">Ashutosh Pandey</a></p>
+</footer>
+
 
 
 
@@ -88,6 +93,7 @@ max-width: 800px;
 margin: 0 auto;
 background: #000;
 height: 100vh;
+user-select: none;
 }
 @media(min-width: 900px){
 body{
@@ -162,6 +168,14 @@ flex-direction: column;
 width: 60%;
 margin: 0 auto;
 }
+@media(min-width: 600px){
+#report div:nth-child(1) img{
+width: 50%;
+}
+#report{
+width: 260px;}}
+
+
 #report div:nth-child(1) h1{
 text-align: center;
 font-size: 22px;
@@ -252,6 +266,32 @@ margin: 1rem auto 0 auto;
 #share i{
 margin-left: 4px;
 transform: rotateY(180deg);
+}
+
+
+
+footer{
+width: 100%;
+max-width: 800px;
+margin: 0 auto;
+position: fixed;
+bottom: 1rem;
+}
+footer p{
+font-size: 16px;		
+color: var(--dfont);
+text-align: center;
+padding: 0 	3vw;
+word-spacing: 1px;
+opacity: 0.78;
+}
+footer i{
+color: red;
+}
+footer a{
+color: var(--dfont);
+text-decoration: none;
+border-bottom: 1px solid var(--dfont);
 }
 </style>		
 <script src="mario.js"></script>

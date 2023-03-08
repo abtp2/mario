@@ -252,10 +252,10 @@ if (navigator.canShare && navigator.canShare({
 files: filesArray
 })){
 navigator.share({
-text: "My new score on this game, you too try this. Link is below : ",
+text: "My new score on this game, wanna try this game? Link is below : ",
 files: filesArray,
-title: "MARIO",
-url: "https://abtp2.github.io/mario"
+title: "MARIO || By Ashutosh Pandey",
+url: "https://mario-web.netlify.app"
 });
 }
 }
