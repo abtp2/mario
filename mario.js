@@ -226,19 +226,37 @@ localStorage.setItem("shareImg", pngUrl);
 });
 
 
-const blob = new Blob([localStorage.getItem("shareImg")], { type: 'image/png' });
-const shareData = {
-  title: "MARIO",
-  text: "Check my new score on mario game, play ghis game by clicking below",
-  url: "https://abtp2.github.io/mario",
-  files: [blob],
-};
+
+
+
+
+
+
+const imageDataUrl =localStorage.getItem("shareImg"); 
+fetch(imageDataUrl).then(function(response){
+return response.blob()
+}).then(function(blob){
+var file = new File([blob], "my.jpg", {
+type: 'image/jpeg'});
+var filesArray = [file];
 
 if(navigator.share){
-navigator.share(shareData);
+if (navigator.canShare && navigator.canShare({
+files: filesArray
+})){
+navigator.share({
+text: "My new score on this game, you too try this. Link is below : ",
+files: filesArray,
+title: "MARIO",
+url: "https://abtp2.github.io/mario"
+});
 }
+}
+
 else{
-alert("Share API is not supported on your device\nAlthouh you played very well 🔥\nPLAY AGAIN !!")
-}
+alert("You device do not support Web Share API\nYou played well 🎉\nPlay again !!");
+}});
+
+
 }
 
