@@ -231,7 +231,7 @@ localStorage.setItem("shareImg", pngUrl);
 
 
 
-
+function shareScore(){
 const imageDataUrl =localStorage.getItem("shareImg"); 
 fetch(imageDataUrl).then(function(response){
 return response.blob()
@@ -256,7 +256,9 @@ url: "https://abtp2.github.io/mario"
 else{
 alert("You device do not support Web Share API\nYou played well 🎉\nPlay again !!");
 }});
-
+}
+/* share score function ended */
+setTimeout(shareScore, 800);
 
 }
 
