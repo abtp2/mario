@@ -216,6 +216,7 @@ localStorage.setItem("theme", "light");
 document.getElementById("share").onclick = () =>{
 let region = document.querySelector("#report");
 document.getElementById("report-close").style.display  ="none";
+document.getElementById("share").style.display  ="none";
 
 html2canvas(region, {
 onrendered: function(canvas){
@@ -235,6 +236,9 @@ localStorage.setItem("shareImg", pngUrl);
 
 function shareScore(){
 document.getElementById("report-close").style.display  ="block";
+document.getElementById("share").style.display  ="block";
+
+
 const imageDataUrl =localStorage.getItem("shareImg"); 
 fetch(imageDataUrl).then(function(response){
 return response.blob()
