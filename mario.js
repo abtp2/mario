@@ -40,6 +40,8 @@ else{
 	
 		document.getElementById("report").style.display ="flex";
 		document.body.classList.add("overlay");
+		document.getElementById("out-mp3").play();
+		document.getElementById("bg-mp3").pause();
 	}
 }
 
@@ -51,6 +53,7 @@ jump();
 }
 
 function jump() {
+ document.getElementById("jump-mp3").play();
 	let dinoPosition = 0;
 	let timerId = setInterval(function() {
 		// Move the dino up
@@ -151,6 +154,8 @@ window.location = window.location;
 window.onload = function(){
 var y = localStorage.getItem("theme");
 var x = document.getElementById("theme-toggler");
+
+
 
 if(y =="dark"){
 document.body.classList.add("dark-theme");
