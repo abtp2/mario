@@ -41,7 +41,6 @@ else{
 		document.getElementById("report").style.display ="flex";
 		document.body.classList.add("overlay");
 		document.getElementById("out-mp3").play();
-		document.getElementById("bg-mp3").pause();
 	}
 }
 
